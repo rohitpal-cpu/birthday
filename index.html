@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ravina! 🎉</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fbcfe8 0%, #e9d5ff 40%, #bae6fd 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        /* HARDWARE-ACCELERATED VISUAL TRANSITIONS */
+        .card {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 24px;
+            padding: 35px 24px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            
+            /* Initial Hidden State Properties */
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            transform: scale(0.92) translateY(15px);
+            display: none;
+            pointer-events: none;
+        }
+
+        /* Active Display State */
+        .card.active-view {
+            display: block !important;
+            opacity: 1;
+            transform: scale(1) translateY(0px);
+            pointer-events: auto;
+        }
+
+        h2 {
+            color: #4c1d95;
+            font-size: 1.35rem;
+            margin-top: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        /* Automated Timer Pill Overlay Layout */
+        .timer-badge {
+            display: inline-block;
+            margin-top: 20px;
+            background: rgba(76, 29, 149, 0.12);
+            color: #4c1d95;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Page 2: Brown Letter Sheet Styling */
+        .letter-sheet {
+            background: #f4ebd0;
+            color: #4a3b32;
+            border-left: 8px solid #dcd1b4;
+            border-radius: 16px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05), 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+        .letter-sheet h3 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7c6353;
+            border-bottom: 1px solid #dcd1b4;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .letter-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        /* Page 3 Elements */
+        .celebration-box {
+            background: #f4ebd0;
+            color: #4a3b32;
+            border-top: 8px solid #dcd1b4;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        .crown-icon {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .ravina-title {
+            font-size: 2.2rem;
+            color: #db2777;
+            margin: 15px 0;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+        /* Golden Arc Text Styles - Kept safely inside view frame bounds */
+        .gold-text {
+            font-weight: 900;
+            font-size: 20px;
+            fill: url(#goldGradient);
+            filter: drop-shadow(0px 3px 4px rgba(0,0,0,0.25));
+            letter-spacing: 4px;
+        }
+        button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            background: linear-gradient(to right, #10b981, #059669);
+            color: white;
+            transition: transform 0.1s ease;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: SAFE GOLD ARCH TEXT, TEDDY BEAR & CAKE -->
+    <div id="page1" class="card active-view">
+        <div style="width: 260px; height: 260px; margin: 0 auto; padding-top: 10px;">
+            <svg viewBox="0 0 200 220" xmlns="http://w3.org" style="width:100%; height:100%; overflow: visible;">
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#BF953F" />
+                        <stop offset="25%" stop-color="#FCF6BA" />
+                        <stop offset="50%" stop-color="#B38728" />
+                        <stop offset="75%" stop-color="#FBF5B7" />
+                        <stop offset="100%" stop-color="#AA771C" />
+                    </linearGradient>
+                    <path id="textArcPath" d="M 15 85 A 85 85 0 0 1 185 85" fill="none" />
+                </defs>
+
+                <text class="gold-text">
+                    <textPath href="#textArcPath" startOffset="50%" text-anchor="middle">HAPPY BIRTHDAY</textPath>
+                </text>
+
+                <ellipse cx="100" cy="205" rx="55" ry="8" fill="rgba(0,0,0,0.15)"/>
+                <circle cx="55" cy="105" r="24" fill="#a16207" />
+                <circle cx="55" cy="105" r="14" fill="#fda4af" />
+                <circle cx="145" cy="105" r="24" fill="#a16207" />
+                <circle cx="145" cy="105" r="14" fill="#fda4af" />
+                <ellipse cx="100" cy="175" rx="46" ry="35" fill="#b45309" />
+                <circle cx="65" cy="200" r="15" fill="#a16207" />
+                <circle cx="135" cy="200" r="15" fill="#a16207" />
+                <circle cx="100" cy="135" r="40" fill="#b45309" />
+                <ellipse cx="100" cy="145" rx="16" ry="10" fill="#fef08a" />
+                <ellipse cx="100" cy="142" rx="6" ry="4" fill="#1e1b4b" />
+                <circle cx="85" cy="128" r="5" fill="#1e1b4b" />
+                <circle cx="87" cy="126" r="1.5" fill="#ffffff" />
+                <circle cx="115" cy="128" r="5" fill="#1e1b4b" />
+                <circle cx="113" cy="126" r="1.5" fill="#ffffff" />
+                <circle cx="72" cy="140" r="6" fill="#f43f5e" opacity="0.4" />
+                <circle cx="128" cy="140" r="6" fill="#f43f5e" opacity="0.4" />
+                <ellipse cx="56" cy="170" rx="14" ry="10" fill="#a16207" />
+                <ellipse cx="144" cy="170" rx="14" ry="10" fill="#a16207" />
+                
+                <rect x="62" y="160" width="76" height="30" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+                <path d="M 62 168 Q 71 174 80 168 Q 89 174 98 168 Q 107 174 116 168 Q 125 174 138 168 L 138 160 L 62 160 Z" fill="#f43f5e" opacity="0.8"/>
+                <rect x="76" y="145" width="4" height="15" fill="#38bdf8" />
+                <path d="M 78 136 Q 81 141 78 145 Q 75 141 78 136 Z" fill="#f59e0b" />
+                <rect x="98" y="141" width="4" height="19" fill="#a855f7" />
+                <path d="M 100 131 Q 103 136 100 141 Q 97 136 100 131 Z" fill="#f59e0b" />
+                <rect x="120" y="145" width="4" height="15" fill="#34d399" />
+                <path d="M 122 136 Q 125 141 122 145 Q 119 141 122 136 Z" fill="#f59e0b" />
+            </svg>
+        </div>
+
+        <h2>Preparing a special surprise for you...</h2>
+        <div class="timer-badge">Opening in <span id="p1-timer">5</span>s ✨</div>
+    </div>
+
+    <!-- PAGE 2: THE BROWN SHEET STATIONERY LETTER -->
+    <div id="page2" class="card">
+        <div class="letter-sheet">
+            <h3>💌 A Special Letter ✍️</h3>
+            <p class="letter-text">
+                Dear Ravina,
+
+                Wishing you a day filled with laughter, love, and infinite joy. May this new year bring you closer to all your dreams!
+
+                Happy Birthday! 🎂
+            </p>
+        </div>
+
+        <h2>Turning to the final page...</h2>
+        <div class="timer-badge">Please wait <span id="p2-timer">5</span>s 🚀</div>
+    </div>
+
+    <!-- PAGE 3: CONGRATULATIONS CLOSING CARD -->
+    <div id="page3" class="card">
+        <div class="celebration-box">
+            <div class="crown-icon">👑</div>
+            <h2 class="ravina-title">Happy Birthday, Ravina!</h2>
+            <p style="font-size: 1.1rem; font-weight: 600; color: #4b5563;">✨ May your day be as bright and beautiful as your smile! ✨</p>
+        </div>
+
+        <button onclick="restartExperience()" style="width: 100%;">View From Beginning 🔄</button>
+    </div>
+
+    <!-- Fixed Instant Run Transition Engine Script -->
+    <script>
+        let countdownTimer;
+
+        // FIXED: Replaced late-binding event listener with an immediate runtime starter
+        function initExperience() {
+            clearInterval(countdownTimer);
+            startPageCountdown('page1', 'page2', 'p1-timer');
+        }
+
+        function startPageCountdown(currentId, nextId, displayId) {
+            let secondsLeft = 5;
+            const displayElement = document.getElementById(displayId);
+            if (displayElement) displayElement.innerText = secondsLeft;
+
+            countdownTimer = setInterval(() => {
+                secondsLeft--;
+                if (displayElement) displayElement.innerText = secondsLeft;
+
+                if (secondsLeft <= 0) {
+                    clearInterval(countdownTimer);
